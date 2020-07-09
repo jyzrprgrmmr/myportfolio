@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "jyzrportfolio"
+    }
+  },
+  "defaultProject": "jyzrportfolio",
+  "cli": {
+    "analytics": "39333f1a-f5fd-46a1-a65f-c072ce243db8"
+  }
 }
