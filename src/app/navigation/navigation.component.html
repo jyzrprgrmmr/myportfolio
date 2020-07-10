@@ -1,17 +1,19 @@
 <div class="navigation">
   <ul class="header">
     <li class="header-btn">
-      <div class="brand">
-        <div class="logo-container">
-          <img src="../../assets/images/portfoliologo.png" alt="Logo" class="logo">
+      <a [routerLink]="['/']">
+        <div class="brand" (click)="isNavOpen = false">
+            <div class="logo-container">
+              <img src="../../assets/images/portfoliologo.png" alt="Logo" class="logo">
+            </div>
+            <div class="brand-container">
+              <div class="brand-name">
+                <div class="first-name">JAYZUR</div>
+                <div class="last-name">GANDIA</div>
+              </div>
+            </div>
         </div>
-        <div class="brand-container">
-          <div class="brand-name">
-            <div class="first-name">JAYZUR</div>
-            <div class="last-name">GANDIA</div>
-          </div>
-        </div>
-      </div>
+      </a>
     </li>
     <li class="header-btn">
       <div class="menu-btn" [ngClass]="{'navOpen': isNavOpen}" (click)="toggleNav()">
@@ -26,4 +28,11 @@
 
 
 <div class="menu-overlay" [ngClass]="{'menuOpen': isNavOpen, 'menuClose':!isNavOpen}">
+  <ul class="menu-links">
+    <li class="m-links"><a [routerLink]="['/']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">HOME</a></li>
+    <li class="m-links"><a [routerLink]="['/projects']" routerLinkActive="active">PROJECTS</a></li>
+    <li class="m-links"><a [routerLink]="['/about']" routerLinkActive="active">ABOUT ME</a></li>
+    <li class="m-links"><a [routerLink]="['/contacts']" routerLinkActive="active">CONTACTS</a></li>
+    <li class="m-links"><a [routerLink]="['/artworks']" routerLinkActive="active">ARTWORKS</a></li>
+  </ul>
 </div>
