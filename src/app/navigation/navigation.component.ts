@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-
+  isNavOpen = false;
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  toggleNav() {
+    this.isNavOpen = !this.isNavOpen;
+  }
+
 
 }
